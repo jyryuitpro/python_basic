@@ -20,3 +20,16 @@ print('niceman', 'google.com', sep='@')
 print('Welcome To', end=' ')
 print('the black parade', end=' ')
 print('piano notes')
+
+print()
+
+# format 사용 [] , {} , ()
+print('{} and {}'.format('You', 'Me'))
+print("{0} and {1} and {0}".format('You', 'Me'))
+print("{a} are {b}".format(a='You', b='Me'))
+
+# %s : 문자, %d : 정수, %f : 실수
+print("%s's favorite number is %d" % ("Jiyoung", 3))
+
+
+
