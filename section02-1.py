@@ -30,6 +30,15 @@ print("{a} are {b}".format(a='You', b='Me'))
 
 # %s : 문자, %d : 정수, %f : 실수
 print("%s's favorite number is %d" % ("Jiyoung", 3))
+print("Test1: %5d, Price: %4.2f" % (776, 6534.123))
+print("Test1: {0: 5d}, Price: {1: 4.2f}".format(776, 6534.123))
+print("Test1: {a: 5d}, Price: {b: 4.2f}".format(a=776, b=6534.123))
 
+print("'You'")
+print('\'You\'')
+print('"You"')
+print("""'You'""")
+print('\\You\\\n')
+print('\t\t\ttest')
 
 
