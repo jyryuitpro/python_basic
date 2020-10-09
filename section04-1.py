@@ -33,3 +33,37 @@ print(f3 + i2)
 
 result = f3 + i2
 print(result, type(result))
+
+a = 5.
+b = 4
+c = 10
+
+print(type(a), type(b))
+result2 = a + b
+print(result2)
+
+# 형변환
+# int, float, complex(복소수)
+
+print(int(result2))
+print(float(c))
+print(complex(3))
+print(int(True))
+print(int(False))
+print(int('3'))
+print(complex(False))
+
+y = 100
+y *= 100
+print(y)
+
+# 수치 연산
+print(abs(-7))
+# n, m = 10, 20
+n, m = divmod(100, 8)
+print(n, m)
+
+import math
+
+print(math.ceil(5.1))
+print(math.floor(3.874))
