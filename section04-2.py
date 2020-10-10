@@ -41,3 +41,33 @@ print(str_o1 * 3)
 print('a' in str_o4)
 print('f' in str_o4)
 print('z' not in str_o4)
+
+# 문자열 형 변환
+print(str(77) + 'a')
+print(str(10.4))
+
+# 문자열 함수
+
+# a = "niceman"
+# b = "orange"
+#
+# print(a.islower())
+# print(b.endswith('e'))
+# print(a.capitalize())
+# print(a.replace('nice', 'good'))
+# print(list(reversed(b)))
+
+a = "niceman"
+b = "orange"
+
+print(a[0:3])
+print(a[0:4])
+print(a[0:len(a)])
+print(a[:4])
+print(a[:])
+print(b[0:4:2])
+print(b[1:-2])
+print(b[::-1])
+
+
+
