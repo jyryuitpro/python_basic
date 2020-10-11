@@ -57,5 +57,46 @@ print(not a > b)
 print(not False)
 print(not True)
 
+# 산순, 관계, 논리 연산자
+# 산술 > 관계 > 논리 순서로 적용
+print(5 + 10 > 0 and not 7 + 3 == 10)
+
+score1 = 90
+score2 = 'A'
+
+if score1 >= 90 and score2 == 'A':
+    print("합격하셨습니다.")
+else:
+    print("불합격입니다.")
+
+# 다중조건문
+num = 90
+
+if num >= 90:
+    print("num 등급 A", num)
+elif num >= 80:
+    print("num 등급 B", num)
+elif num >= 70:
+    print("num 등급 C", num)
+else:
+    print("꽝")
+
+# 중첩조건문
+
+age = 27
+height = 175
+
+if age >= 20:
+    if height >= 170:
+        print("A지망 지원 가능")
+    elif height >= 169:
+        print("B지망 지원 가능")
+    else:
+        print("지원 불가")
+else:
+    print("20세 이상 지원 가능")
+
+
+
 
 
