@@ -74,3 +74,31 @@ for n in name:
         print(n.lower())
     else:
         print(n.upper())
+
+# break
+numbers = [14, 3, 4, 7, 10, 24, 17, 2, 33, 15, 34, 36, 38]
+
+for num in numbers:
+    if num == 33:
+        print(num)
+        break
+    else:
+        print(num)
+
+# for - else 구문(반복문이 정상적으로 수행 된 경우 else 블럭 수행)
+for num in numbers:
+    if num == 33:
+        print(num)
+        break
+    else:
+        print(num)
+else:
+    print("for - else 구문")
+
+# continue
+lt = ["1", 2, 5, True, 4.3, complex(4)]
+
+for v in lt:
+    if type(v) is float:
+        continue
+    print(type(v))
