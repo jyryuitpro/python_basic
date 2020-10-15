@@ -74,16 +74,56 @@ for v in q3:
         continue
     else:
         print(v, end='')
+print()
+
+q5 = [x for x in q3 if x != "정"]
+print(q5)
 
 # 7. 1부터 100까지 자연수 중 '홀수'만 한 라인으로 출력 하세요.
 
+for n in range(1, 101):
+    if n % 2 != 0:
+        print(n, end=', ')
+print()
+
+q6 = [x for x in range(1, 101) if x % 2 != 0]
+print(q6)
 
 # 8. 아래 리스트 항목 중에서 5글자 이상의 단어만 출력하세요.
 q4 = ["nice", "study", "python", "anaconda", "!"]
 
+for v in q4:
+    if len(v) >= 5:
+        print(v, end=' ')
+print()
+
 # 9. 아래 리스트 항목 중에서 소문자만 출력하세요.
 q5 = ["A", "b", "c", "D", "e", "F", "G", "h"]
 
+for v in q5:
+    if v.isupper():
+        continue
+    else:
+        print(v, end=' ')
+print()
 
 # 10. 아래 리스트 항목 중에서 소문자는 대문자로 대문자는 소문자로 출력하세요.
 q6 = ["A", "b", "c", "D", "e", "F", "G", "h"]
+
+for v in q6:
+    if v.isupper():
+        print(v.lower())
+    else:
+        print(v.upper())
+
+
+# 일반적인 방법
+numbers1 = []
+
+for n in range(1, 101):
+    numbers1.append(n)
+print(numbers1)
+
+# 리스트 컴프리헨션 (List Comperhension)
+numbers2 = [x for x in range(1, 101)]
+print(numbers2)
