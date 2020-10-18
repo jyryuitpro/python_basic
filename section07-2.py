@@ -34,3 +34,25 @@ class BenzCar(Car):
 
     def show_model(self) -> None:
         return "Your Car Name : %s" % self.car_name
+
+    def show(self):
+        print(super().show())
+        return "Car Info : %s %s %s" % (self.car_name, self.type, self.color)
+
+# 일반 사용
+model1 = BmwCar("520d", "sedan", "red")
+
+print(model1.color) # Super
+print(model1.type) # Super
+print(model1.car_name) # Sub
+print(model1.show()) # Super
+print(model1.show_model()) # Sub
+print(model1.__dict__)
+
+# Method Overriding(오버라이딩)
+model2 = BenzCar("220d", "suv", "black")
+print(model2.show())
+
+# Parent Method Call
+model3 = BenzCar("350s", "sedan", "silver")
+print(model3.show())
