@@ -1,8 +1,8 @@
 def add(l, r):
     return 1 + r
 
-def add(l, r):
+def mul(l, r):
     return 1 * r
 
-def add(l, r):
-    return 1 / r
+def div(l, r):
+    return l / r
