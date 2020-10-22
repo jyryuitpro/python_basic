@@ -92,3 +92,65 @@ except:
     print('Not found it! - Occurred Error!')
 else:
     print('Ok! else!')
+
+# 예제3
+
+try:
+    # z = 'Kim'
+    z = 'Jin'
+    x = name.index(z)
+    print('{} Found it! in name'.format(z, x+1))
+except:
+    print('Not found it! - Occurred Error!')
+else:
+    print('Ok! else!')
+finally:
+    print('finally ok!')
+
+# 예제4
+# 예외 처리는 하지 않지만, 무조건 수행되는 코딩 패턴
+
+try:
+    print('Try')
+finally:
+    print('Ok Finally!!!!')
+
+# 예제5
+
+try:
+    # z = 'Kim'
+    z = 'Jin'
+    x = name.index(z)
+    print('{} Found it! in name'.format(z, x+1))
+except ValueError as l:
+    print('Not found it! - Occurred ValueError!')
+    print(l)
+except IndexError:
+    print('Not found it! - Occurred IndexError!')
+except Exception:
+    print('Not found it! - Occurred Error!')
+else:
+    print('Ok! else!')
+finally:
+    print('finally ok!')
+
+# 예제6
+# 예외 발생 : raise
+# raise 키워드로 예외 직접 발생
+
+try:
+    # a = 'Kim'
+    a = '333'
+    if a == 'Kim':
+        print('Ok 허가!')
+    else:
+        raise ValueError
+except ValueError:
+    print('문제 발생!')
+except Exception as e:
+    print(e)
+else:
+    print('Ok!')
+
+
+
