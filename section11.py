@@ -51,3 +51,35 @@ with open('./resource/sample3.csv', 'w', newline='') as f:
     for v in w:
         # print(v)
         wt.writerow(v)
+
+# 예제5
+with open('./resource/sample4.csv', 'w', newline='') as f:
+    wt = csv.writer(f)
+    wt.writerows(w)
+
+# XSL, XLSX
+# openpyxl, xlsxwriter, xlrd, xlwt, xlutils
+# pandas 를 주로 사용(openpyxl, xlrd)
+# pip install xlrd
+# pip install openpyxl
+# pip install pandas
+
+import pandas as pd
+
+# 옵션
+# sheetname='시트명' 또는 숫자, header=숫자, skiprow=숫자
+xlsx = pd.read_excel('./resource/sample.xlsx')
+
+# 상위 데이터 확인
+print(xlsx.head())
+print()
+
+# 데이터 확인
+print(xlsx.tail())
+
+# 데이터 확인
+print(xlsx.shape) # 행, 열
+
+# 엑셀 or CSV 다시 쓰기
+xlsx.to_excel('./resource/result.xlsx', index=False)
+xlsx.to_csv('./resource/result.csv', index=False)
