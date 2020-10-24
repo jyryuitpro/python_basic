@@ -49,16 +49,34 @@ print('param1 -> \n', c.fetchone())
 print('param1 -> \n', c.fetchall()) # 데이터 없음
 
 # WHERE Retrieve2
-
+param2 = 4
+c.execute("SELECT * FROM users WHERE id='%s'" % param2) # %s, %f, %d
+print('param2 -> \n', c.fetchone())
+print('param2 -> \n', c.fetchall()) # 데이터 없음
 
 # WHERE Retrieve3
-
+c.execute("SELECT * FROM users WHERE id=:Id", {"Id": 5}) # %s, %f, %d
+print('param3 -> \n', c.fetchone())
+print('param3 -> \n', c.fetchall()) # 데이터 없음
 
 # WHERE Retrieve4
-
+param4 = (3, 5)
+c.execute("SELECT * FROM users WHERE id IN(?, ?)", param4)
+print('param4 -> \n', c.fetchall())
 
 # WHERE Retrieve5
-
+c.execute("SELECT * FROM users WHERE id IN('%d', '%d')" % (3, 4))
+print('param5 -> \n', c.fetchall())
 
 # WHERE Retrieve6
+c.execute("SELECT * FROM users WHERE id=:id1 OR id=:id2", {"id1": 2, "id2": 5})
+print('param6 -> \n', c.fetchall())
 
+# Dump 출력
+with conn:
+    with open('C:/Users/jyryu/PycharmProjects/python_basic/resource/dump.sql', 'w') as f:
+        for line in conn.iterdump():
+            f.write('%s\n' % line)
+        print('Dump Print Complete')
+
+# f.close(), conn.close()
