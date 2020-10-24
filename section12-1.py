@@ -17,4 +17,14 @@ print('sqlite3.version : ', sqlite3.version)
 print('sqlite3.sqite_version : ', sqlite3.sqlite_version)
 
 # DB 생성 & Auto Commit(Rollback)
+conn = sqlite3.connect('C:/Users/jyryu/PycharmProjects/python_basic/database.db', isolation_level=None)
 
+# Cursor
+c = conn.cursor()
+print('Cursor Type : ', type(c))
+
+# 테이블 생성(Data Type : TEXT, NUMERIC, INTEGER, REAL, BLOB)
+c.execute("CREATE TABLE IF NOT EXISTS users(id INTEGER PRIMARY KEY, username TEXT, email TEXT, phone TEXT, website TEXT, regdate TEXT)")
+
+# 데이터 삽입
+c.execute("INSERT INTO users VALUES(1, 'Ryu', 'tester@gmail.com', '010-xxxx-xxxx', 'tester.com', ?)", (nowDatetime,))
