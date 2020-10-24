@@ -28,3 +28,28 @@ c.execute("CREATE TABLE IF NOT EXISTS users(id INTEGER PRIMARY KEY, username TEX
 
 # 데이터 삽입
 c.execute("INSERT INTO users VALUES(1, 'Ryu', 'tester@gmail.com', '010-xxxx-xxxx', 'tester.com', ?)", (nowDatetime,))
+c.execute("INSERT INTO users(id, username, email, phone, website, regdate) VALUES (?,?,?,?,?,?)", (2, 'Park', 'park@gmail.com', '010-yyyy-yyyy', 'park.com', nowDatetime,))
+
+# Many 삽입(튜플, 리스트)
+userList = (
+    (3, 'Lee', 'lee@gmail.com', '010-zzzz-zzzz', 'lee.com', nowDatetime,),
+    (4, 'Cho', 'cho@gmail.com', '010-0000-0000', 'cho.com', nowDatetime,),
+    (5, 'Yoo', 'yoo@gmail.com', '010-0101-0101', 'yoo.com', nowDatetime,),
+)
+
+c.executemany("INSERT INTO users(id, username, email, phone, website, regdate) VALUES (?,?,?,?,?,?)", userList)
+# conn.rollback()
+# conn.commit()
+
+# 테이블 데이터 삭제
+# conn.execute("DELETE FROM users")
+# print("users db deleted : ", conn.execute("DELETE FROM users").rowcount)
+
+# 커밋 : isolation_level = None 일 경우 자동 반영(오토 커밋)
+# conn.commit()
+
+# 롤백
+# conn.rollback()
+
+# 접속 해제
+# conn.close()
