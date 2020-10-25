@@ -5,7 +5,7 @@
 import sqlite3
 
 # DB생성(파일)
-conn = sqlite3.connect('C:/Users/jyryu/PycharmProjects/python_basic/database.db')
+conn = sqlite3.connect('./resource/database.db')
 
 # Cursor 연결
 c = conn.cursor()

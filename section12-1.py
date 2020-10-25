@@ -17,7 +17,7 @@ print('sqlite3.version : ', sqlite3.version)
 print('sqlite3.sqite_version : ', sqlite3.sqlite_version)
 
 # DB 생성 & Auto Commit(Rollback)
-conn = sqlite3.connect('C:/Users/jyryu/PycharmProjects/python_basic/database.db', isolation_level=None)
+conn = sqlite3.connect('./resource/database.db', isolation_level=None)
 
 # Cursor
 c = conn.cursor()

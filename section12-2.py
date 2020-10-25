@@ -5,7 +5,7 @@
 import sqlite3
 
 # DB파일 조회(없으면 새로 생성)
-conn = sqlite3.connect('C:/Users/jyryu/PycharmProjects/python_basic/database.db') # 본인 DB 경로
+conn = sqlite3.connect('./resource/database.db') # 본인 DB 경로
 
 # 커서 바인딩
 c = conn.cursor()
